@@ -69,7 +69,15 @@
 
   // Initialize viewer.
   var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
-
+   webgl: true,
+   controls: {
+    mouseView: true,
+    keyboard: true,
+    touchView: true,
+    // Habilitar botón de VR
+    vrButton: true
+    }
+  });
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
     var urlPrefix = "tiles";
